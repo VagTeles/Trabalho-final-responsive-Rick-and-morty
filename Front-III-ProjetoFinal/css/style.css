@@ -1,0 +1,261 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+p {
+	color: #acafac;
+	font-weight: bold;
+}
+h1 {
+	transition: font-size 0.3s ease;
+}
+h1:hover {
+	font-size: 70px;
+}
+h2 {
+	color: #ffffff;
+}
+h4 {
+	color: #000;
+	margin-bottom: 15px;
+}
+ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px;
+	width: 50%;
+	margin-bottom: 10px;
+}
+li {
+	list-style: none;
+	margin: 0.25rem 0.5rem;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+.footer {
+	color: #808180;
+}
+.card-text p:nth-child(2n) {
+	margin-bottom: 1em;
+	color: #ffffff;
+}
+.logo img {
+	height: 60px;
+	width: 60px;
+	padding: 5px;
+	position: absolute;
+	opacity: 0;
+	animation-name: fade-in-out;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes fade-in-out {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.card {
+	display: flex;
+	overflow: hidden;
+	background: transparent;
+	border-radius: 10px;
+	margin: 0.75rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.card-container {
+	display: flex;
+	flex-wrap: nowrap;
+}
+#img {
+	background-image: url(../assets/FUNDO.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.card-container {
+	position: relative;
+}
+.card:hover {
+	background-color: #069e1f;
+}
+.search input {
+	width: 40%;
+}
+#grey {
+	color: #878787;
+	font-weight: bold;
+}
+.estilo {
+	font-weight: bold;
+	margin-top: 100px;
+}
+.circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 5px;
+}
+.green {
+	background-color: green;
+}
+.gray {
+	background-color: gray;
+}
+.red {
+	background-color: red;
+}
+#pagination {
+	background-color: transparent;
+}
+#pagination button {
+	margin: 0 5px;
+	padding: 5px 10px;
+	background-color: #028200;
+	border: none;
+	cursor: pointer;
+}
+#pagination button:hover {
+	background-color: #01924e;
+}
+#pagination button.active {
+	background-color: #848484;
+	color: #fff;
+}
+#totalPages {
+	margin-top: 10px;
+	text-align: center;
+}
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	text-align: center;
+	width: 300px;
+	animation-name: modal-open;
+	animation-duration: 0.5s;
+}
+@keyframes modal-open {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+}
+.modal-content.fade-out {
+	animation: fade-out 0.3s ease;
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* Estilo para a imagem do personagem  */
+.modal-content img {
+	border-radius: 50%;
+	max-width: 200px;
+	height: auto;
+	margin-bottom: 20px;
+}
+/* Estilo para o nome do personagem  */
+.modal-content h2 {
+	color: #2b2b2b;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+/* Estilo para o status do personagem  */
+.modal-content h4 {
+	color: #555;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+/* Estilo para as últimas informações  */
+.modal-content p {
+	margin-bottom: 5px;
+}
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #aaa;
+	cursor: pointer;
+}
+.close:hover {
+	color: #000;
+}
+#scrollButton:hover {
+	background-color: green;
+	transform: scale(1.1);
+	transition: background-color 0.3s, transform 0.3s;
+}
+#scrollButton {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+}
+#scrollButton i {
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+}
+#scrollButton.show {
+	display: block;
+}
+#scrollButton:hover {
+	background-color: green;
+	transform: scale(1.1);
+	transition: background-color 0.3s, transform 0.3s;
+}
